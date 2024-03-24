@@ -6,7 +6,7 @@ const dotenv = require("dotenv"); // Require dotenv
 // Import Paths
 const userRoutes = require("./routes/user");
 const productRoutes = require("./routes/product");
-const port = 4002;
+const port = 4032;
 
 const app = express();
 
