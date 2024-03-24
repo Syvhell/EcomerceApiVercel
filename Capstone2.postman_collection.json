@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "b0978a19-cbc7-491d-8289-ca91bbb72e3f",
+		"name": "Capstone2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30223073"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Ariel\",\r\n    \"lastName\":\"Dela Cruz\",\r\n    \"mobileNo\":\"09867682326\",\r\n    \"email\":\"Ariel@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "checkout-cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODMwYWU3NzAwMDc5ZmUzMmNlOSIsImVtYWlsIjoiQXJpZWxAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5OTUxNDYzNH0.IcZDW030ooEMpsAXw124U-2gpebp1GZLEyXyxU-vd2M"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "localhost:4000/users/cart-checkout-orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Log-In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"Syvhell@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "stretch-add-to-cart-",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODMwYWU3NzAwMDc5ZmUzMmNlOSIsImVtYWlsIjoiQXJpZWxAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5OTUxNDYzNH0.IcZDW030ooEMpsAXw124U-2gpebp1GZLEyXyxU-vd2M"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"productId\": \"654c88a6ae7700079fe32cee\",\r\n  \"quantity\": 2,\r\n  \"operation\": \"add\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/add-to-cart"
+					},
+					"response": []
+				},
+				{
+					"name": "checkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODMwYWU3NzAwMDc5ZmUzMmNlOSIsImVtYWlsIjoiQXJpZWxAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5OTUxNDYzNH0.IcZDW030ooEMpsAXw124U-2gpebp1GZLEyXyxU-vd2M"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\":  \"654c88c3ae7700079fe32cf0\",\r\n  \"quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/checkout"
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"oldPassword\":  \"123\",\r\n  \"newPassword\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/reset-password"
+					},
+					"response": []
+				},
+				{
+					"name": "update-user-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\":\"Syvhell\",\r\n    \"lastName\":\"Umila\",\r\n    \"mobileNo\":\"09867682326\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/update-profile"
+					},
+					"response": []
+				},
+				{
+					"name": "user-details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/users/654c8830ae7700079fe32ce9/user-details"
+					},
+					"response": []
+				},
+				{
+					"name": "stretch-all-cart-items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/users/get-all-cart-items"
+					},
+					"response": []
+				},
+				{
+					"name": "stretch-get-orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/users/get-orders"
+					},
+					"response": []
+				},
+				{
+					"name": "stretch-get-all-orders-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/users/get-all-orders"
+					},
+					"response": []
+				},
+				{
+					"name": "stretch-set-Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzYzI5ZWM1OGY1YzRmMjlmZDhjMyIsImVtYWlsIjoic3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0NDE2NDF9.Hny8v_9d5yEQIr6oWkrMgp70ukMFJ-cEQWZbwmqhSmk"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isAdmin\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/users/654c8830ae7700079fe32ce9/set-asAdmin"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "add-product-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ0NzB9.eLtm9yJBUd559StAB3gTVcRMYlK4ioZ8ZonRAcu2yt0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Samsung s99\",\r\n    \"description\":\"Futuristic iPhone\",\r\n    \"price\": 100000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/products/add-product"
+					},
+					"response": []
+				},
+				{
+					"name": "update-product-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzYzI5ZWM1OGY1YzRmMjlmZDhjMyIsImVtYWlsIjoic3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MDQzMTd9.MkTsF1Vdi0bSXQf5_LFfRol3uYWM0WiZClZlH210s-M"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Huawie\",\r\n    \"description\":\"Faster than light and sunshine\",\r\n    \"price\": 25000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/products/654c8893ae7700079fe32cec/update-product"
+					},
+					"response": []
+				},
+				{
+					"name": "archive-product-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": "localhost:4000/products/654c8893ae7700079fe32cec/archive-product"
+					},
+					"response": []
+				},
+				{
+					"name": "activate-product-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzYzI5ZWM1OGY1YzRmMjlmZDhjMyIsImVtYWlsIjoic3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0MzI4MjR9.d80rseoAUm41IbWMNbX2GaoDrikWO2yDBosKXckSV2A"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Huawie\",\r\n    \"description\":\"Faster than light and sunshine\",\r\n    \"price\": 25000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/products/654b44680baaa7161bfe8697/activate-product"
+					},
+					"response": []
+				},
+				{
+					"name": "all-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": ""
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/products/all-product"
+					},
+					"response": []
+				},
+				{
+					"name": "all-products-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGM4ODE4YWU3NzAwMDc5ZmUzMmNlNiIsImVtYWlsIjoiU3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1MTQ5ODh9.cnMdzpLzN1dom3Pr6840tDsuEMjj8eSoICUZ-ERDGVM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/products/all-product-admin"
+					},
+					"response": []
+				},
+				{
+					"name": "single-product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzYzI5ZWM1OGY1YzRmMjlmZDhjMyIsImVtYWlsIjoic3l2aGVsbEBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0MzA1MjN9.pDQySXfX4yYg2uxh--GZ4Xq331zJnuI2vD01oV3BWic"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Samsung S23 ULTRA\",\r\n    \"description\":\"Zoom into the sky\",\r\n    \"price\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/products/654b410e3f92d5fa4e4e04dd/single-product"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
